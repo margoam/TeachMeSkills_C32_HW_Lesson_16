@@ -1,8 +1,10 @@
 package com.teachmeskills.hw.lesson_16.util;
 
+import com.teachmeskills.hw.lesson_16.constant.Constants;
 import com.teachmeskills.hw.lesson_16.model.Student;
 
 import java.util.*;
+
 
 public class PassportOperation {
 
@@ -11,13 +13,12 @@ public class PassportOperation {
         Set<String> passportSet = new HashSet<>();
         Map<Student, String> dataCollection = new HashMap<>();
 
-        String[] passportSeries = {"MK", "PP", "MC", "MY"};
         Random random = new Random();
 
         for (Student student : students) {
             String passportNumber;
             do {
-                String series = passportSeries[random.nextInt(passportSeries.length)];
+                String series = Constants.passportSeries[random.nextInt(Constants.passportSeries.length)];
                 int number = 1000000 + random.nextInt(9999999);
                 passportNumber = series + number;
             } while (passportSet.contains(passportNumber));
