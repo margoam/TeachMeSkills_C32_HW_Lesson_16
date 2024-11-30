@@ -1,8 +1,10 @@
-package com.teachmeskills.hw.lesson_16.model;
+package com.teachmeskills.hw.lesson_16.util;
+
+import com.teachmeskills.hw.lesson_16.model.Student;
 
 import java.util.*;
 
-public class Passport {
+public class PassportOperation {
 
     public static Map<Student, String> passportGenerationForStudent(Set<Student> students) {
 

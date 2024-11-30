@@ -1,6 +1,6 @@
 package com.teachmeskills.hw.lesson_16;
 
-import com.teachmeskills.hw.lesson_16.model.Passport;
+import com.teachmeskills.hw.lesson_16.util.PassportOperation;
 import com.teachmeskills.hw.lesson_16.model.Student;
 import com.teachmeskills.hw.lesson_16.util.StudentDataOperation;
 
@@ -33,7 +33,7 @@ public class AppRunner {
         groupMembers.add(new Student("Vlad"));
         groupMembers.add(new Student("Kate"));
 
-        Map<Student, String> studentPassportData = Passport.passportGenerationForStudent(groupMembers);
+        Map<Student, String> studentPassportData = PassportOperation.passportGenerationForStudent(groupMembers);
         StudentDataOperation.extractStudentPassportNumber(studentPassportData);
     }
 }
