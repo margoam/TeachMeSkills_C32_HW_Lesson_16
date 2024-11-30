@@ -19,7 +19,7 @@ public class PassportOperation {
             String passportNumber;
             do {
                 String series = Constants.passportSeries[random.nextInt(Constants.passportSeries.length)];
-                int number = 1000000 + random.nextInt(9999999);
+                int number = random.nextInt(1000000, 9999999);
                 passportNumber = series + number;
             } while (passportSet.contains(passportNumber));
 
